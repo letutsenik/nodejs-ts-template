@@ -1,0 +1,3 @@
+interface ITask {
+	description: string;
+}

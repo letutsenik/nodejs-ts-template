@@ -1,1 +1,2 @@
-console.log('NodeJS Template');
+import { Task } from './Task';
+console.log(new Task('description'));
