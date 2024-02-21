@@ -11,16 +11,29 @@
   },
   "plugins": ["@typescript-eslint"],
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking"
+    "plugin:jest/recommended", "airbnb", "airbnb-typescript", "prettier"
   ],
   "rules": {
     "strict": ["error", "never"],
     "no-mixed-spaces-and-tabs": "off",
     "object-curly-spacing": ["error", "always"],
     "@typescript-eslint/no-unsafe-assignment": ["warn"],
-    "@typescript-eslint/no-unsafe-call": ["warn"]
+    "@typescript-eslint/no-unsafe-call": ["warn"],
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": ["camelCase", "snake_case", "PascalCase", "UPPER_CASE"]
+      },
+      {
+        "selector": "function",
+        "format": ["camelCase", "PascalCase"]
+      },
+      {
+        "selector": "typeLike",
+        "format": ["PascalCase"]
+      }
+    ]
   },
   "env": {
     "browser": true,
