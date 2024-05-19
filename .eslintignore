@@ -1,0 +1,5 @@
+.hysky
+.vscode
+build
+node_modules
+jest.config.js
